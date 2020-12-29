@@ -1,14 +1,15 @@
 const cheerio = require("cheerio");
-const url = "https://coursehunter.net/course/professionalnyy-sql";
+const url = "https://coursehunter.net/course/production-typescript";
 const puppeteer = require("puppeteer");
-const request = require("request");
 const fs = require("fs");
 const arr = [];
+
 (async () => {
   const browser = await puppeteer.launch({
     defaultViewport: { height: 1080, width: 1920 },
     headless: true,
   });
+
   const page = await browser.newPage();
   await page.goto(url);
 
